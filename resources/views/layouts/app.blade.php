@@ -12,12 +12,11 @@
         name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"> --}}
     <!-- CSS Files -->
     <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('light-bootstrap/css/light-bootstrap-dashboard.css?v=2.0.0') }} " rel="stylesheet" />
     
-    <link rel="stylesheet" href="{{ asset('bs-select/dist/css/bootstrap-select.min.css') }}">
 </head>
 
 <body>
@@ -53,13 +52,11 @@
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!--  Chartist Plugin  -->
-<script src="{{ asset('light-bootstrap/js/plugins/chartist.min.js') }}"></script>
+{{-- <script src="{{ asset('light-bootstrap/js/plugins/chartist.min.js') }}"></script> --}}
 <!--  Notifications Plugin    -->
 <script src="{{ asset('light-bootstrap/js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="{{ asset('light-bootstrap/js/light-bootstrap-dashboard.js?v=2.0.0') }}" type="text/javascript"></script>
-
-<script src="{{ asset('bs-select/dist/js/bootstrap-select.min.js') }}"></script>
 
 @stack('js')
 <script>

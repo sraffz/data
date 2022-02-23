@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg " color-on-scroll="500">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"> {{ $navName }} </a>
-        <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar burger-lines"></span>
             <span class="navbar-toggler-bar burger-lines"></span>
             <span class="navbar-toggler-bar burger-lines"></span>
@@ -35,30 +36,30 @@
                     </a>
                 </li> --}}
             </ul>
-            <ul class="navbar-nav   d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href=" {{route('profile.edit') }} ">
-                        <span class="no-icon">{{ __('Akaun') }}</span>
-                    </a>
-                </li>
+            <ul class="navbar-nav d-flex align-items-center">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="no-icon">{{ __('Menu Tambahan') }}</span>
+                    <a class="nav-link dropdown-toggle" href="{{ url('http://example.com/') }}"
+                        id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="nc-icon nc-bullet-list-67"></i>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href=" {{ route('profile.edit') }} ">
+                            {{-- <i class="nc-icon nc-single-02" style="vertical-align: middle"></i> --}}
+                            {{ __('Akaun') }}
+                        </a>
+                        <div class="divider"></div>
                         <a class="dropdown-item" href="{{ url('senarai-jabatan') }}">{{ __('Senarai Jabatan') }}</a>
                         <a class="dropdown-item" href="{{ url('senarai-skim') }}">{{ __('Skim') }}</a>
-                        {{-- <a class="dropdown-item" href="#">{{ __('Something') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('Something else here') }}</a> --}}
-                        {{-- <div class="divider"></div>
-                        <a class="dropdown-item" href="#">{{ __('Separated link') }}</a> --}}
+                        <div class="divider"></div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <a class="text-danger dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{-- <i class="nc-icon nc-button-power"></i> --}}
+                                {{ __('Log out') }}
+                            </a>
+                        </form>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <a class="text-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Log out') }} </a>
-                    </form>
                 </li>
             </ul>
         </div>

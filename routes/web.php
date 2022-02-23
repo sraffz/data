@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function () {
 Route::middleware(['auth'])->group(function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
 	Route::get('{page}/{id}', ['as' => 'page.withid', 'uses' => 'PageController@withid']);
-	Route::get('{page}/{id}', ['as' => 'pegawai.pgw', 'uses' => 'PageController@pgw']);
+	// Route::get('{page}/{id}', ['as' => 'pegawai.pgw', 'uses' => 'PageController@pgw']);
 });
 
 
